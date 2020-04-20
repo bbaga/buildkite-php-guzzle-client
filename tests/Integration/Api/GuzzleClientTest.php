@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace BuildkiteApi\Tests\Integration\Api;
+namespace bbaga\BuildkiteApi\Tests\Integration\Api;
 
-use BuildkiteApi\Api\GuzzleClient;
+use bbaga\BuildkiteApi\Api\GuzzleClient;
 use PHPUnit\Framework\TestCase;
 
 final class GuzzleClientTest extends TestCase

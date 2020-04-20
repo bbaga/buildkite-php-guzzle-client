@@ -11,12 +11,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "BuildkiteApi\\": "src/"
+            "bbaga\\BuildkiteApi\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BuildkiteApi\\Tests\\": "tests/"
+            "bbaga\\BuildkiteApi\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "dev",
