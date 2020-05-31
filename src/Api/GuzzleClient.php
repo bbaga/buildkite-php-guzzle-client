@@ -21,9 +21,9 @@ final class GuzzleClient implements HttpClientInterface
         $this->client = $client ?? new Client();
     }
 
-    public function send(RequestInterface $request, array $options = []): ResponseInterface
+    public function sendRequest(RequestInterface $request): ResponseInterface
     {
-        return $this->client->send($request, $options);
+        return $this->client->send($request);
     }
 
     /**
