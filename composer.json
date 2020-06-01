@@ -22,7 +22,6 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "bbaga/buildkite-php-http-interface": "2.0.x-dev",
         "guzzlehttp/guzzle": "^6.5"
     },
     "require-dev": {
