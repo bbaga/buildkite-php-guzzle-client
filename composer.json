@@ -1,6 +1,6 @@
 {
     "name": "bbaga/buildkite-php-guzzle-client",
-    "description": "HttpClientInterface for bbaga/buildkite-php",
+    "description": "PSR-18 Wrapper for Guzzle to be used with bbaga/buildkite-php",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -22,7 +22,6 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "bbaga/buildkite-php-http-interface": "^1.0",
         "guzzlehttp/guzzle": "^6.5"
     },
     "require-dev": {

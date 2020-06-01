@@ -11,7 +11,7 @@ final class GuzzleClientTest extends TestCase
     public function test(): void {
         $client = new GuzzleClient();
         $request = $client->createRequest('GET', 'https://www.google.com');
-        $response = $client->send($request);
+        $response = $client->sendRequest($request);
 
         $this->assertEquals(200, $response->getStatusCode());
     }

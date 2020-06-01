@@ -4,12 +4,11 @@ declare(strict_types=1);
 namespace bbaga\BuildkiteApi\Api;
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Psr7\Request;
+use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\UriInterface;
 
-final class GuzzleClient implements HttpClientInterface
+final class GuzzleClient implements ClientInterface
 {
     /**
      * @var Client
@@ -21,23 +20,8 @@ final class GuzzleClient implements HttpClientInterface
         $this->client = $client ?? new Client();
     }
 
-    public function send(RequestInterface $request, array $options = []): ResponseInterface
+    public function sendRequest(RequestInterface $request): ResponseInterface
     {
-        return $this->client->send($request, $options);
-    }
-
-    /**
-     * Create a new request.
-     *
-     * @param string $method The HTTP method associated with the request.
-     * @param UriInterface|string $uri The URI associated with the request. If
-     *     the value is a string, the factory MUST create a UriInterface
-     *     instance based on it.
-     *
-     * @return RequestInterface
-     */
-    public function createRequest(string $method, $uri): RequestInterface
-    {
-        return new Request($method, $uri);
+        return $this->client->send($request);
     }
 }
